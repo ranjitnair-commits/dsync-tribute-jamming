@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Booking Confirmed | D-Sync Retro Jamming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+/* Advanced matching: details saved by the booking page (same browser) help Meta match the buyer to the ad click */
+var lead = {};
+try { lead = JSON.parse(localStorage.getItem('dsync_lead') || '{}') || {}; } catch (e) {}
+fbq('init', '1643296680688706', lead.em ? { em: lead.em, ph: lead.ph, external_id: lead.external_id } : undefined);
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1643296680688706&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  :root{--black:#100a06;--black-2:#1b120a;--gold:#c8a24d;--gold-bright:#f0d488;--maroon:#631a24;--cream:#f4e9d0;--cream-dim:#c9b98d;--line:rgba(200,162,77,.35)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--black);color:var(--cream);
+    font-family:'Cormorant Garamond',serif;font-size:1.15rem;
+    background-image:radial-gradient(circle at 15% 8%,rgba(200,162,77,.10),transparent 40%),radial-gradient(circle at 88% 18%,rgba(99,26,36,.28),transparent 45%),linear-gradient(180deg,var(--black),var(--black-2))}
+  a{color:inherit;text-decoration:none}
+  .card{width:100%;max-width:520px;border:1px solid var(--line);border-radius:16px;padding:36px 28px;text-align:center;background:rgba(244,233,208,.045)}
+  .brand{font-family:'Cinzel',serif;letter-spacing:.2em;font-size:.8rem;color:var(--gold);margin-bottom:22px}
+  .tick{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold-bright);font-size:2rem}
+  h1{font-family:'Cinzel',serif;font-size:1.7rem;line-height:1.2;color:var(--gold-bright);margin-bottom:10px}
+  p{color:var(--cream-dim);margin-bottom:8px}
+  .facts{margin:22px 0;padding:16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;gap:6px;color:var(--cream)}
+  .facts b{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.14em;color:var(--gold);display:block}
+  .ref{font-size:.95rem;word-break:break-all}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
+  .btn{padding:12px 22px;border-radius:999px;border:1px solid var(--gold);font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.1em}
+  .btn.primary{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:var(--black);font-weight:700}
+  .passes{margin:0 0 16px;padding:14px;border:1px solid var(--gold);border-radius:12px;background:rgba(200,162,77,.08);color:var(--cream)}
+  .passes b{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.14em;color:var(--gold);display:block;margin-bottom:4px}
+  .warn{display:none;margin-top:14px;padding:12px;border:1px dashed var(--line);border-radius:10px;font-size:1rem}
+  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">D-SYNC COMMUNITY</div>
+    <div class="tick" aria-hidden="true">✓</div>
+    <h1>You&rsquo;re in! Booking confirmed</h1>
+    <p>Thank you for booking the D-Sync Retro Jamming night. See you there.</p>
+
+    <div class="facts">
+      <div><b>EVENT</b>Mohd Rafi &times; Kishore Kumar Tribute Jamming</div>
+      <div><b>DATE &amp; TIME</b>Saturday, 05th December 2026 &middot; 08:00 PM onwards</div>
+      <div><b>VENUE</b>BBC (NIBM), Pune</div>
+      <div id="refRow" style="display:none"><b>PAYMENT REFERENCE</b><span class="ref" id="ref"></span></div>
+    </div>
+
+    <div class="passes"><b>YOUR PASSES</b>Your passes will be sent shortly to your phone number and email ID. Please check your inbox (and spam folder) as well.</div>
+    <p>Your cover charge is fully redeemable on food &amp; drinks at the venue. Keep your payment reference handy in case you need help at the entry.</p>
+    <p>Questions? Call 8007416208.</p>
+
+    <div class="btns">
+      <a class="btn primary" href="https://www.instagram.com/dsync_community/" target="_blank" rel="noopener">Follow on Instagram</a>
+      <a class="btn" href="../">Back to booking page</a>
+    </div>
+    <div class="warn" id="warn">We couldn&rsquo;t find a payment confirmation in this link. If you have paid, your booking is safe. Please call 8007416208 and share your payment receipt.</div>
+  </main>
+
+<script>
+(function(){
+  var PRICE = 399, CURRENCY = 'INR';
+  var WINDOW_MS = 3 * 60 * 60 * 1000;   /* a booking started in this browser within the last 3 hours counts */
+
+  var q = new URLSearchParams(location.search);
+  var payId = q.get('razorpay_payment_id') || '';
+  var status = q.get('razorpay_payment_link_status') || q.get('status') || '';
+  var paidParams = payId && (!status || status === 'paid');
+
+  /* Razorpay may send the buyer back with no payment details, so we also recognise the buyer from the booking page */
+  var recentLead = false, leadId = '';
+  try {
+    var L = JSON.parse(localStorage.getItem('dsync_lead') || '{}') || {};
+    leadId = L.external_id || '';
+    recentLead = !!(L.ts && (Date.now() - L.ts) < WINDOW_MS);
+  } catch(e){}
+
+  if(payId){ document.getElementById('ref').textContent = payId; document.getElementById('refRow').style.display = 'block'; }
+
+  var ok = paidParams || recentLead;
+  if(!ok){ document.getElementById('warn').style.display = 'block'; return; }
+
+  /* One Purchase per booking, even if the page is refreshed */
+  var eid = payId || leadId || 'booking';
+  var key = 'dsync_purchase_' + eid;
+  try { if(localStorage.getItem(key)) return; } catch(e){}
+
+  var data = { value: PRICE, currency: CURRENCY, content_name: 'D-Sync Retro Jamming 5 Dec 2026', content_type: 'product', num_items: 1 };
+  try {
+    fbq('track', 'Purchase', data, { eventID: eid });
+    try { localStorage.setItem(key, '1'); } catch(e){}
+  } catch(err){}
+})();
+</script>
+</body>
+</html>
